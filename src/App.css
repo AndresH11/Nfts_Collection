@@ -1,38 +1,248 @@
-.App {
-  text-align: center;
+*{
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#layout1{
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    background: rgb(5,117,230);
+    background: linear-gradient(137deg, rgba(5,117,230,1) 0%, rgba(144,199,255,1) 35%, rgba(255,255,255,1) 100%);   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.containerInput{
+    border-radius: 33px;
+    border: 2px solid #EEEEEE;
+}
+
+/*SLIDER*/
+
+.sliderContainer{
+    width: 99%;
+    padding-top: 5px;
+    height: 210px;
+    overflow: hidden;
+}
+
+.sliderContainer ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 640%;
+    animation: cambio320 20s infinite;
+    animation-direction: alternate;
+}
+
+.sliderContainer li {
+    list-style: none;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    border: 0.5px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.sliderContainer img {
+    width: 200px;
+    height: 200px;
+    border: 0.5px solid transparent;
+    border-radius: 15px;
+}
+
+@media (min-width: 374px) {
+  .sliderContainer ul{
+    animation: cambio375 20s infinite;
+    animation-direction: alternate;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width : 424px) {
+  .sliderContainer ul{
+    animation: cambio425 20s infinite;
+    animation-direction: alternate;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width : 767px) {
+  .sliderContainer ul{
+    width: 300%;
+    animation: cambio768 20s infinite;
+    animation-direction: alternate;
+  }
+}
+
+@media (min-width : 1023px) {
+  .sliderContainer ul{
+    width: 300%;
+    animation: cambio1024 20s infinite;
+    animation-direction: alternate;
+  }
+}
+
+@keyframes cambio1024 {
+    0% {margin-left: -14%;}
+    10%{margin-left: -14%;}
+
+    20% {margin-left: -48%;}
+    30% {margin-left: -48%;}
+
+    40% {margin-left: -81.5%;}
+    50% {margin-left: -81.5%;}
+
+    60% {margin-left: -115.5%}
+    70% {margin-left: -115.5%}
+
+    80% {margin-left: -149%;}
+    90% {margin-left: -149%;}
+
+    95% {margin-left: -183%;}
+    100% {margin-left: -183%;}
+}
+
+@keyframes cambio768 {
+  0% {margin-left:-20%}
+  5%{margin-left: -20%}
+
+  10% {margin-left: -53%;}
+  15% {margin-left: -53%;}
+
+  53% {margin-left: -83%;}
+  25% {margin-left: -83%;}
+
+  30% {margin-left: -114%;}
+  35% {margin-left: -114%;}
+
+  40% {margin-left: -144.5%;}
+  45% {margin-left: -144.5%;}
+
+  53% {margin-left:  -174%;}
+  55% {margin-left: -174%;}
+}
+
+@keyframes cambio425 {
+  0% {margin-left:-64%}
+  5%{margin-left: -64%}
+
+  10% {margin-left: -121%;}
+  15% {margin-left: -121%;}
+
+  20% {margin-left: -179%;}
+  25% {margin-left: -179%;}
+
+  30% {margin-left: -236%;}
+  35% {margin-left: -236%;}
+
+  40% {margin-left: -294%;}
+  45% {margin-left: -294%;}
+
+  50% {margin-left:  -352%;}
+  55% {margin-left: -352%;}
+
+  60%{margin-left: -410%;}
+  65%{margin-left: -410%;}
+
+  70%{margin-left: -468%;}
+  75%{margin-left: -468%;}
+}
+
+@keyframes cambio375 {
+  0% {margin-left:-32%}
+  5%{margin-left: -32%}
+
+  10% {margin-left: -99%;}
+  15% {margin-left: -99%;}
+
+  20% {margin-left: -165%;}
+  25% {margin-left: -165%;}
+
+  30% {margin-left: -232%;}
+  35% {margin-left: -232%;}
+
+  40% {margin-left: -298%;}
+  45% {margin-left: -298%;}
+
+  50% {margin-left:  -364%;}
+  55% {margin-left: -364%;}
+
+  60%{margin-left: -430%;}
+  65%{margin-left: -430%;}
+
+  70%{margin-left: -497%;}
+  75%{margin-left: -497%;}
+}
+
+@keyframes cambio320 {
+    0% {margin-left: 14%;}
+    5%{margin-left: 14%;}
+
+    10% {margin-left: -68%;}
+    15% {margin-left: -68%;}
+
+    20% {margin-left: -148%;}
+    25% {margin-left: -148%;}
+
+    30% {margin-left: -227%;}
+    35% {margin-left: -227%;}
+
+    40% {margin-left: -306%;}
+    45% {margin-left: -306%;}
+
+    50% {margin-left:  -386%;}
+    55% {margin-left: -386%;}
+
+    60%{margin-left: -465%;}
+    65%{margin-left: -465%;}
+
+    70%{margin-left: -545%;}
+    75%{margin-left: -545%;}
+}
+
+/*FIN DE SLIDER*/
+
+
+/*PRELOADER*/
+
+.reloader__container {
+  width: 400.36px;
+  height: 143.57px;
+  padding: 36px 32px 43px 32px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.reloader__text {
+  margin-bottom: 30px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+}
+
+.reloader__externalBar {
+  width: 100%;
+  height: 6px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reloader__internalBar {
+  width: 100.93px;
+  height: 100%;
+  background-color: #2f80ed;
+  border-radius: 8px;
+  animation: ReloaderX 1.5s infinite;
+}
+
+
+@keyframes ReloaderX {
+  from{
+    transform: translateX(-100%);
+  }to{
+    transform: translateX(340%);
   }
 }
