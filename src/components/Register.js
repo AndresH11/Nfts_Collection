@@ -24,7 +24,6 @@ const Register = ()=>{
       await signup(user.email, user.password);
       navigate('/login');
     } catch (error) {
-      console.log(error.message);
       if(error.code === 'auth/missing-email') setError('Escriba el correo');
       if(error.code === 'auth/internal-error') setError('Correo invalido');
       if(error.code === 'auth/weak-password') setError('La contraseña debe tener mas de 6 digitos');
@@ -34,7 +33,6 @@ const Register = ()=>{
 
   //OBTENEMOS EL EMAIL Y EL PASSWORD
   const handleChange = ({ target : {name, value} })=>{
-    console.log(name,value)
       setUser({ ...user, [name] : value});
     };
 
