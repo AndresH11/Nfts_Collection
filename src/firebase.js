@@ -1,5 +1,4 @@
 
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
@@ -10,13 +9,13 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDjRgQyMTN1iWs8YRfrKtk3bOsLuUTNTZE",
-  authDomain: "nftscolection.firebaseapp.com",
-  projectId: "nftscolection",
-  storageBucket: "nftscolection.appspot.com",
-  messagingSenderId: "381524037923",
-  appId: "1:381524037923:web:c83bf31eb2c70a35793c96",
-  measurementId: "G-73J1N8VRW0"
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
+  measurementId: process.env.REACT_APP_MASUREMENTID
 };
 
 // Initialize Firebase
