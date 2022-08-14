@@ -63,15 +63,15 @@ const MainBody = ()=>{
         etiquetaAncla.download=`${nanoid(30)}`;
         etiquetaAncla.click();
       });
+    }else{
+        //ARROJANDO UN ERROR
+      setError('coloca un nombre y numero de imagenes max 10');
+  
+      //LIMPIAMOS EL ERROR
+      setTimeout(() => {
+        setError('')
+      }, 5000);
     }
-
-    //ARROJANDO UN ERROR
-    setError('coloca un nombre y numero de imagenes max 10');
-
-    //LIMPIAMOS EL ERROR
-    setTimeout(() => {
-      setError('')
-    }, 5000);
   }
 
   return(
